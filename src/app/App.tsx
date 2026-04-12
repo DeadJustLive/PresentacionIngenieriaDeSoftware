@@ -10,6 +10,7 @@ import Slide6 from './components/slides/Slide6';
 import Slide7 from './components/slides/Slide7';
 import Slide8 from './components/slides/Slide8';
 import Slide0 from './components/slides/Slide0';
+import SlideBeneficiarios from './components/slides/SlideBeneficiarios';
 import SlideAnexo1 from './components/slides/SlideAnexo1';
 import SlideAnexo2 from './components/slides/SlideAnexo2';
 
@@ -20,6 +21,7 @@ const slides = [
   { id: 'Requerimientos', component: Slide4, isMain: true },
   { id: 'Usabilidad', component: Slide5, isMain: true },
   { id: 'Calidad', component: Slide6, isMain: true },
+  { id: 'Beneficiarios', component: SlideBeneficiarios, isMain: true },
   { id: 'Visión de Impacto', component: Slide7, isMain: true },
   { id: 'A1: Carta Gantt', component: SlideAnexo1, isMain: false },
   { id: 'A2: EDT', component: SlideAnexo2, isMain: false },
