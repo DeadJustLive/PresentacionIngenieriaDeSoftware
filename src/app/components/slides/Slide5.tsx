@@ -7,25 +7,25 @@ export default function Slide5() {
       title: "Pre-digitación Móvil",
       desc: "Autogestión ciudadana. Permite adelantar datos desde cualquier smartphone, evitando demoras de captura física.",
       icon: Smartphone,
-      color: "blue"
+      bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400"
     },
     {
       title: "Validación en Origen",
       desc: "Notificaciones y chequeos automáticos en tiempo real que previenen rechazos o errores en ventanilla.",
       icon: CheckCircle,
-      color: "emerald"
+      bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400"
     },
     {
       title: "Reducción de Carga Cognitiva",
       desc: "Dashboard unificado para el funcionario. Presenta solo la información crítica para tomar decisiones rápidas.",
       icon: LayoutDashboard,
-      color: "purple"
+      bg: "bg-amber-500/10", border: "border-amber-500/20", text: "text-amber-400"
     },
     {
       title: "Accesibilidad e Identidad",
       desc: "Interfaces bajo estándares WCAG, alto contraste, y preparados para integración con biometría futura.",
       icon: Fingerprint,
-      color: "cyan"
+      bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400"
     }
   ];
 
@@ -63,8 +63,8 @@ export default function Slide5() {
               transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
               className="flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 hover:bg-white/10 transition-colors backdrop-blur-sm"
             >
-              <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-${mejora.color}-500/10 border border-${mejora.color}-500/20 flex items-center justify-center mb-6`}>
-                <Icon className={`w-7 h-7 lg:w-8 lg:h-8 text-${mejora.color}-400`} />
+              <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl ${mejora.bg} border ${mejora.border} flex items-center justify-center mb-6`}>
+                <Icon className={`w-7 h-7 lg:w-8 lg:h-8 ${mejora.text}`} />
               </div>
               <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 tracking-wide">{mejora.title}</h3>
               <p className="text-slate-400 text-sm lg:text-base leading-relaxed">

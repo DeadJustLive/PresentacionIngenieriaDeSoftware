@@ -11,8 +11,11 @@ import Slide7 from './components/slides/Slide7';
 import Slide8 from './components/slides/Slide8';
 import Slide0 from './components/slides/Slide0';
 import SlideBeneficiarios from './components/slides/SlideBeneficiarios';
+import SlideFlujo from './components/slides/SlideFlujo';
 import SlideAnexo1 from './components/slides/SlideAnexo1';
 import SlideAnexo2 from './components/slides/SlideAnexo2';
+import SlideCronogramaHitos from './components/slides/SlideCronogramaHitos';
+import SlideCronogramaFases from './components/slides/SlideCronogramaFases';
 
 const slides = [
   { id: 'Contexto', component: Slide1, isMain: true },
@@ -20,11 +23,14 @@ const slides = [
   { id: 'Arquitectura', component: Slide3, isMain: true },
   { id: 'Requerimientos', component: Slide4, isMain: true },
   { id: 'Usabilidad', component: Slide5, isMain: true },
+  { id: 'Flujo Operativo', component: SlideFlujo, isMain: true },
   { id: 'Calidad', component: Slide6, isMain: true },
   { id: 'Beneficiarios', component: SlideBeneficiarios, isMain: true },
   { id: 'Visión de Impacto', component: Slide7, isMain: true },
-  { id: 'A1: Carta Gantt', component: SlideAnexo1, isMain: false },
-  { id: 'A2: EDT', component: SlideAnexo2, isMain: false },
+  { id: 'Anexo: Cron. Hitos', component: SlideCronogramaHitos, isMain: false },
+  { id: 'Anexo: Cron. Fases', component: SlideCronogramaFases, isMain: false },
+  { id: 'Anexo: Carta Gantt', component: SlideAnexo1, isMain: false },
+  { id: 'Anexo: EDT', component: SlideAnexo2, isMain: false },
   { id: 'Cierre y QA', component: Slide8, isMain: true },
   { id: 'Espera / Fondo', component: Slide0, isMain: true }
 ];

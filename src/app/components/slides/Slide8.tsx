@@ -20,15 +20,6 @@ export default function Slide8() {
                     Gracias por su atención. El equipo queda a completa disposición para resolver dudas sobre la propuesta, arquitectura o despliegue.
                 </p>
 
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => window.dispatchEvent(new CustomEvent('toggleHub'))}
-                    className="flex items-center gap-3 px-6 py-4 lg:px-8 lg:py-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-colors text-white font-medium text-lg shadow-lg backdrop-blur-md"
-                >
-                    <LayoutGrid className="w-6 h-6 text-blue-400" />
-                    <span>Abrir Hub de Diapositivas</span>
-                </motion.button>
             </motion.div>
         </div>
     );
