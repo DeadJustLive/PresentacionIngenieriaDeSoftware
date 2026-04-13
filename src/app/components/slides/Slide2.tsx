@@ -8,21 +8,21 @@ export default function Slide2() {
       label: 'Alcance (Fijo)',
       title: 'Definido al Inicio',
       description: 'Requisitos cerrados y exhaustivos, exigido al ser Aduanas una entidad gubernamental',
-      color: 'blue'
+      bg: 'bg-blue-500/10', border: 'border-blue-500/20', text: 'text-blue-400'
     },
     {
       icon: Calendar,
       label: 'Tiempo',
       title: '12 Semanas',
       description: 'Ejecución secuencial y estructurada, controlada mediante Carta Gantt y EDT',
-      color: 'cyan'
+      bg: 'bg-cyan-500/10', border: 'border-cyan-500/20', text: 'text-cyan-400'
     },
     {
       icon: DollarSign,
       label: 'Costo',
       title: '$30.000.000 CLP',
       description: 'Presupuesto cerrado sin desviaciones, con monitoreo continuo de hitos',
-      color: 'red'
+      bg: 'bg-emerald-500/10', border: 'border-emerald-500/20', text: 'text-emerald-400'
     }
   ];
 
@@ -59,8 +59,8 @@ export default function Slide2() {
             className="relative"
           >
             <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 h-full hover:bg-white/10 transition-colors flex flex-col items-center text-center">
-              <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-${item.color}-500/10 border border-${item.color}-500/20 flex items-center justify-center mb-4 lg:mb-6`}>
-                <item.icon className={`w-6 h-6 lg:w-7 lg:h-7 text-${item.color}-400`} />
+              <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl ${item.bg} border ${item.border} flex items-center justify-center mb-4 lg:mb-6`}>
+                <item.icon className={`w-6 h-6 lg:w-7 lg:h-7 ${item.text}`} />
               </div>
 
               <div className="text-[10px] lg:text-xs uppercase tracking-widest text-slate-500 mb-2">
