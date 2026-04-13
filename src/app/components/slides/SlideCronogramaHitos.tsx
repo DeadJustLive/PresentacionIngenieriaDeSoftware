@@ -93,7 +93,7 @@ export default function SlideCronogramaHitos() {
                             </div>
 
                             {/* Timeline Node effect */}
-                            <div className="absolute -bottom-16 -right-8 text-[20rem] font-bold text-white/20 leading-none z-0">
+                            <div className="absolute -bottom-4 -right-4 text-[10rem] font-bold text-white/20 leading-none z-0">
                                 {index + 1}
                             </div>
                         </motion.div>
