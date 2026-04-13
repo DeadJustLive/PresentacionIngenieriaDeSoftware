@@ -4,9 +4,9 @@ import { Calendar, Users, Code, TestTube, Rocket } from 'lucide-react';
 
 export default function SlideAnexo1() {
   const fases = [
-    { fase: 'Semana 1-2', nombre: 'Planificación', icon: Calendar, items: ['Análisis requerimientos', 'Arquitectura', 'Sprint 0'] },
-    { fase: 'Semana 3-5', nombre: 'Desarrollo Sprint 1', icon: Code, items: ['Backend core', 'APIs base', 'Base de datos'] },
-    { fase: 'Semana 6-8', nombre: 'Desarrollo Sprint 2', icon: Users, items: ['Frontend ciudadano', 'Frontend func.', 'Integraciones'] },
+    { fase: 'Semana 1-2', nombre: 'Planificación', icon: Calendar, items: ['Análisis requerimientos', 'Arquitectura', 'Diseño Inicial'] },
+    { fase: 'Semana 3-5', nombre: 'Fase Backend', icon: Code, items: ['Backend core', 'APIs base', 'Base de datos'] },
+    { fase: 'Semana 6-8', nombre: 'Fase Frontend', icon: Users, items: ['Frontend ciudadano', 'Frontend func.', 'Integraciones'] },
     { fase: 'Semana 9-10', nombre: 'Testing QA', icon: TestTube, items: ['Pruebas unitarias', 'Integración', 'UAT'] },
     { fase: 'Semana 11-12', nombre: 'Despliegue', icon: Rocket, items: ['Deploy prod.', 'Capacitación', 'Documentación'] }
   ];
@@ -46,7 +46,7 @@ export default function SlideAnexo1() {
           Cronograma Detallado
         </h2>
         <p className="text-base lg:text-xl text-slate-400">
-          12 semanas distribuidas en 5 fases iterativas
+          12 semanas distribuidas en 5 fases secuenciales
         </p>
       </motion.div>
 

@@ -5,23 +5,23 @@ export default function Slide2() {
   const planItems = [
     {
       icon: Target,
-      label: 'Alcance',
-      title: 'Automatizar e Integrar',
-      description: 'Pre-digitación, validación en tiempo real e interoperabilidad institucional',
+      label: 'Alcance (Fijo)',
+      title: 'Definido al Inicio',
+      description: 'Requisitos cerrados y exhaustivos, exigido al ser Aduanas una entidad gubernamental',
       color: 'blue'
     },
     {
       icon: Calendar,
       label: 'Tiempo',
       title: '12 Semanas',
-      description: 'Ciclo iterativo con entregas incrementales y validación continua',
+      description: 'Ejecución secuencial y estructurada, controlada mediante Carta Gantt y EDT',
       color: 'cyan'
     },
     {
       icon: DollarSign,
       label: 'Costo',
       title: '$30.000.000 CLP',
-      description: 'Inversión controlada con seguimiento de hitos y gestión de riesgos',
+      description: 'Presupuesto cerrado sin desviaciones, con monitoreo continuo de hitos',
       color: 'red'
     }
   ];
@@ -37,15 +37,15 @@ export default function Slide2() {
         <div className="flex items-center gap-3 mb-4 lg:mb-6">
           <div className="h-1 w-8 lg:w-12 bg-blue-500" />
           <span className="text-blue-400 uppercase tracking-wider text-xs lg:text-sm font-medium">
-            Plan Maestro
+            Plan Maestro (Enfoque Predictivo)
           </span>
           <div className="h-1 w-8 lg:w-12 bg-blue-500" />
         </div>
         <h2 className="text-3xl lg:text-5xl font-bold text-white mb-2 lg:mb-4">
-          Alcance, Tiempo y Costo
+          Triple Restricción Tradicional
         </h2>
         <p className="text-base lg:text-xl text-slate-400 max-w-3xl">
-          Gestión basada en metodología iterativa con control de proyecto triple restricción
+          Gestión basada en Metodología Tradicional (Cascada) asegurando previsibilidad técnica
         </p>
       </motion.div>
 
@@ -86,7 +86,7 @@ export default function Slide2() {
         className="mt-12 flex items-center gap-4"
       >
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
-        <span className="text-slate-500 text-sm">Ciclo de Vida Iterativo</span>
+        <span className="text-slate-500 text-sm">Flujo Secuencial: Requisitos ➔ Análisis ➔ Diseño ➔ Desarrollo ➔ Pruebas</span>
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
       </motion.div>
     </div>

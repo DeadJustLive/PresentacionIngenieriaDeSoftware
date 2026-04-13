@@ -24,7 +24,7 @@ export default function Slide6() {
     {
       icon: TrendingUp,
       title: 'Mejora Continua',
-      subtitle: 'Ciclo iterativo',
+      subtitle: 'Optimización',
       description: 'Retroalimentación constante, métricas de calidad y optimización progresiva'
     }
   ];

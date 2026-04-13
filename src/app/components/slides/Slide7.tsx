@@ -48,7 +48,7 @@ export default function Slide7() {
               Buscamos una solución:
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                Controlada, Escalable y Ágil
+                Controlada, Escalable y Eficiente
               </span>
             </h1>
           </motion.div>
@@ -95,7 +95,7 @@ export default function Slide7() {
                 Hacia una frontera digital eficiente
               </span>
               <span className="text-slate-400 text-base lg:text-lg">
-                Tecnología ágil al servicio del país y su competitividad
+                Tecnología eficiente al servicio del país y su competitividad
               </span>
             </div>
           </motion.div>
