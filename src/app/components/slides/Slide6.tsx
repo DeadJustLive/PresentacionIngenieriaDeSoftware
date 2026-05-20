@@ -1,3 +1,7 @@
+// @use(kind, props, deps)
+// @kind(feature)
+// @props({})
+// @deps(motion/react, lucide-react)
 import { motion } from 'motion/react';
 import { Award, CheckCircle, GitBranch, TrendingUp } from 'lucide-react';
 
@@ -30,102 +34,96 @@ export default function Slide6() {
   ];
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-20 py-12 lg:py-0 overflow-y-auto lg:overflow-hidden w-full">
+    <div className="w-full h-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 lg:px-20 py-4 sm:py-6 lg:py-0">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-8 lg:mb-12 mt-8 lg:mt-0 flex-shrink-0 flex flex-col items-center"
+        className="mb-4 sm:mb-6 lg:mb-8 flex-shrink-0 flex flex-col items-center"
       >
-        <div className="flex items-center justify-center gap-3 mb-4 lg:mb-6">
-          <div className="h-1 w-8 lg:w-12 bg-blue-500" />
-          <span className="text-blue-400 uppercase tracking-wider text-xs lg:text-sm font-medium">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4 lg:mb-6">
+          <div className="h-1 w-6 sm:w-8 lg:w-12 bg-blue-500" />
+          <span className="text-blue-400 uppercase tracking-wider text-[10px] sm:text-xs lg:text-sm font-medium">
             Calidad Total
           </span>
-          <div className="h-1 w-8 lg:w-12 bg-blue-500" />
+          <div className="h-1 w-6 sm:w-8 lg:w-12 bg-blue-500" />
         </div>
-        <h2 className="text-3xl lg:text-5xl font-bold text-white mb-2 lg:mb-4">
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-1 sm:mb-2 lg:mb-3">
           Aseguramiento y Mejora Continua
         </h2>
-        <p className="text-base lg:text-xl text-slate-400 max-w-3xl">
+        <p className="text-xs sm:text-sm lg:text-base text-slate-400 max-w-3xl">
           Control técnico basado en estándares internacionales y prácticas de ingeniería de software
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl pb-8 lg:pb-0">
-        {qaItems.map((item, index) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 + index * 0.15, duration: 0.7 }}
-            className="relative group"
-          >
-            <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 h-full hover:bg-white/10 transition-all hover:border-blue-500/30">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-8 h-8 text-blue-400" />
+      <div className="flex-1 min-h-0 flex flex-col items-center justify-center w-full max-w-5xl mx-auto">
+        <div className="slide-card-grid grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-5 w-full mb-3 sm:mb-4">
+          {qaItems.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + index * 0.15, duration: 0.7 }}
+              className="slide-card relative group bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl hover:bg-white/10 transition-all hover:border-blue-500/30"
+            >
+              <div className="flex items-start gap-2 sm:gap-3 lg:gap-5">
+                <div className="slide-card-icon rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-blue-400" />
                 </div>
 
-                <div className="flex-1">
-                  <div className="text-xs uppercase tracking-widest text-blue-400 mb-2">
+                <div className="flex-1 text-left min-w-0">
+                  <div className="text-[9px] sm:text-[10px] lg:text-xs uppercase tracking-widest text-blue-400 mb-0.5 sm:mb-1">
                     {item.subtitle}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-sm sm:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2">
                     {item.title}
                   </h3>
 
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-[10px] sm:text-xs lg:text-sm text-slate-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
               </div>
+            </motion.div>
+          ))}
+        </div>
 
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="absolute top-4 right-4 w-12 h-px bg-gradient-to-r from-transparent to-blue-500/50" />
-                <div className="absolute top-4 right-4 w-px h-12 bg-gradient-to-b from-transparent to-blue-500/50" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="w-full max-w-5xl mt-auto"
+        >
+          <div className="bg-gradient-to-r from-blue-950/30 via-slate-900/30 to-blue-950/30 border border-blue-500/20 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 backdrop-blur-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+              <div className="flex items-center gap-2 sm:gap-3 text-left">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-emerald-400" />
+                </div>
+                <div>
+                  <h4 className="text-sm sm:text-base lg:text-xl font-bold text-white mb-0.5">Calidad como Estrategia</h4>
+                  <p className="text-[10px] sm:text-xs lg:text-sm text-slate-400">
+                    Basado en ISO/IEC 25010 con prácticas de control continuo
+                  </p>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.6 }}
-        className="mt-12 max-w-6xl"
-      >
-        <div className="bg-gradient-to-r from-blue-950/30 via-slate-900/30 to-blue-950/30 border border-blue-500/20 rounded-2xl p-8 backdrop-blur-sm">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
-                <CheckCircle className="w-6 h-6 text-emerald-400" />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-white mb-1">Calidad como Estrategia</h4>
-                <p className="text-sm text-slate-400">
-                  Basado en ISO/IEC 25010 con prácticas de control continuo
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">100%</div>
-                <div className="text-xs text-slate-400">Cobertura QA</div>
-              </div>
-              <div className="w-px h-12 bg-slate-700" />
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                <div className="text-xs text-slate-400">Monitoreo</div>
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5">100%</div>
+                  <div className="text-[9px] sm:text-[10px] lg:text-xs text-slate-400 uppercase tracking-wider">Cobertura QA</div>
+                </div>
+                <div className="w-px h-6 sm:h-8 lg:h-10 bg-slate-700" />
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-0.5">24/7</div>
+                  <div className="text-[9px] sm:text-[10px] lg:text-xs text-slate-400 uppercase tracking-wider">Monitoreo</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }

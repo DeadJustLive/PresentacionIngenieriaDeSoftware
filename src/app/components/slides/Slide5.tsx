@@ -1,3 +1,7 @@
+// @use(kind, props, deps)
+// @kind(feature)
+// @props({})
+// @deps(motion/react, lucide-react)
 import { motion } from 'motion/react';
 import { Smartphone, CheckCircle, LayoutDashboard, Fingerprint } from 'lucide-react';
 
@@ -30,49 +34,51 @@ export default function Slide5() {
   ];
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-950 via-blue-950/10 to-slate-950 flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-20 py-12 lg:py-0 overflow-y-auto lg:overflow-hidden w-full">
+    <div className="w-full h-full bg-gradient-to-br from-slate-950 via-blue-950/10 to-slate-950 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 lg:px-20 py-4 sm:py-6 lg:py-0">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-8 lg:mb-12 mt-8 lg:mt-0 flex-shrink-0 flex flex-col items-center"
+        className="mb-4 sm:mb-6 lg:mb-8 flex-shrink-0 flex flex-col items-center"
       >
-        <div className="flex items-center justify-center gap-3 mb-4 lg:mb-6">
-          <div className="h-1 w-8 lg:w-12 bg-blue-500" />
-          <span className="text-blue-400 uppercase tracking-wider text-xs lg:text-sm font-medium">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4 lg:mb-6">
+          <div className="h-1 w-6 sm:w-8 lg:w-12 bg-blue-500" />
+          <span className="text-blue-400 uppercase tracking-wider text-[10px] sm:text-xs lg:text-sm font-medium">
             Prototipo y Usabilidad
           </span>
-          <div className="h-1 w-8 lg:w-12 bg-blue-500" />
+          <div className="h-1 w-6 sm:w-8 lg:w-12 bg-blue-500" />
         </div>
-        <h2 className="text-3xl lg:text-5xl font-bold text-white mb-2 lg:mb-4">
+        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-1 sm:mb-2 lg:mb-3">
           Diseño Centrado en Usuario
         </h2>
-        <p className="text-base lg:text-xl text-slate-400 max-w-3xl">
+        <p className="text-xs sm:text-sm lg:text-base text-slate-400 max-w-3xl">
           Reducir errores humanos y facilitar la experiencia en ventanilla mediante interfaces claras y accesibles
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl pb-8 lg:pb-0 w-full text-left">
-        {mejoras.map((mejora, index) => {
-          const Icon = mejora.icon;
-          return (
-            <motion.div
-              key={mejora.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-              className="flex flex-col bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 hover:bg-white/10 transition-colors backdrop-blur-sm"
-            >
-              <div className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl ${mejora.bg} border ${mejora.border} flex items-center justify-center mb-6`}>
-                <Icon className={`w-7 h-7 lg:w-8 lg:h-8 ${mejora.text}`} />
-              </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 tracking-wide">{mejora.title}</h3>
-              <p className="text-slate-400 text-sm lg:text-base leading-relaxed">
-                {mejora.desc}
-              </p>
-            </motion.div>
-          );
-        })}
+      <div className="flex-1 min-h-0 flex items-center justify-center w-full max-w-5xl mx-auto">
+        <div className="slide-card-grid grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-5 w-full">
+          {mejoras.map((mejora, index) => {
+            const Icon = mejora.icon;
+            return (
+              <motion.div
+                key={mejora.title}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+                className="slide-card flex flex-col bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 hover:bg-white/10 transition-colors backdrop-blur-sm"
+              >
+                <div className={`slide-card-icon rounded-lg sm:rounded-xl ${mejora.bg} border ${mejora.border} flex items-center justify-center mb-2 sm:mb-3`}>
+                  <Icon className={`w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 ${mejora.text}`} />
+                </div>
+                <h3 className="text-sm sm:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 tracking-wide">{mejora.title}</h3>
+                <p className="text-slate-400 text-[10px] sm:text-xs lg:text-sm leading-relaxed">
+                  {mejora.desc}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

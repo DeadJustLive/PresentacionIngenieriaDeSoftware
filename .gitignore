@@ -1,1 +1,11 @@
 node_modules
+dist/
+
+# openPrompt-Lang (OPL) — no subir al repositorio del proyecto
+.openprompt/
+.opencode/
+prompt-lang.json
+AGENTS.md
+GEMINI.md
+contexto.md
+*.template.*
